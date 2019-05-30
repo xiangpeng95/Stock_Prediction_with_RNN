@@ -5,17 +5,17 @@ matplotlib.use("TkAgg")
 import matplotlib.pyplot as plt
 import numpy as np
 
-from model import LSTM_RNN
+from samsung_model import LSTM_RNN
 
 flags = tf.app.flags
 flags.DEFINE_integer("seq_length", 7, "seq_length")
 flags.DEFINE_integer("data_dim", 5, "data_dim")
 flags.DEFINE_integer("hidden_dim", 10, "hidden_dim")
 flags.DEFINE_integer("output_dim", 1, "output_dim")
-flags.DEFINE_integer("iterations" , 10 , "iterations")
+flags.DEFINE_integer("iterations" , 5000 , "iterations")
 flags.DEFINE_float("learning_rate", 0.005, "learning_rate")
-flags.DEFINE_integer("num_layer", 2, "num_layer")
-flags.DEFINE_float("keep_prob", 0.8, "keep_prob")
+flags.DEFINE_integer("num_layer", 100, "num_layer")
+flags.DEFINE_float("keep_prob", 0.5, "keep_prob")
 
 FLAGS = flags.FLAGS
 
